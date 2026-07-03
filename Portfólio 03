@@ -1,0 +1,23 @@
+programa
+{
+	inclua biblioteca Util
+	inclua biblioteca Calendario
+	
+	funcao inicio()
+	{
+		inteiro numeroSorteado
+		
+		escreva("Sorteando um número...\n")
+		escreva("Aguarde 5 segundos...\n")
+		
+		numeroSorteado = Util.sorteia(1, 100)
+		
+		Util.aguarde(5000)
+		
+		escreva("\nRESULTADO DO SORTEIO\n")
+		escreva("Número sorteado: ", numeroSorteado, "\n")
+		
+		escreva("Data: ", Calendario.dia_mes_atual(), "-", Calendario.mes_atual(), "-", Calendario.ano_atual(), "\n")
+		escreva("Horário: ", Calendario.hora_atual(falso), ":", Calendario.minuto_atual(), ":", Calendario.segundo_atual(), "\n")
+	}
+}
